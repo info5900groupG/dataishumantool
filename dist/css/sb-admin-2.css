@@ -434,3 +434,14 @@ table.dataTable thead .sorting:after {
     border-left-width: 0;
   }
 }
+
+/* NEW CLASSES */
+#gg-rq {
+  text-align: center;
+}
+#gg-rq i {
+  margin: 0px 10px
+}
+#gg-authors {
+  text-align: center;
+}

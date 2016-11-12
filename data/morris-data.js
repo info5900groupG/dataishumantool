@@ -1,11 +1,11 @@
 $(function() {
 
-    Morris.Area({
+    Morris.Line({ //Area, Bar, Line
         element: 'morris-area-chart',
         data: [{
             period: '2010 Q1',
             iphone: 2666,
-            ipad: null,
+            ipad: 5000,
             itouch: 2647
         }, {
             period: '2010 Q2',
