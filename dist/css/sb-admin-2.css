@@ -445,3 +445,7 @@ table.dataTable thead .sorting:after {
 #gg-authors {
   text-align: center;
 }
+.gg-list-header {
+    text-align: left;
+    margin: 0px 10px;
+}
