@@ -12,6 +12,7 @@ body {
 #page-wrapper {
   padding: 0 15px;
   min-height: 568px;
+	margin-bottom: 150px; // for footer
   background-color: white;
 }
 @media (min-width: 768px) {
