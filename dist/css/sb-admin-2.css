@@ -435,7 +435,7 @@ table.dataTable thead .sorting:after {
   }
 }
 
-/* NEW CLASSES */
+/* NEW */
 #gg-rq {
   text-align: center;
 }
@@ -448,4 +448,10 @@ table.dataTable thead .sorting:after {
 .gg-list-header {
     text-align: left;
     margin: 0px 10px;
+}
+.gg-row-truncate {
+/*
+    max-height: 300px;
+    overflow-y: hidden;
+*/
 }
