@@ -20,12 +20,6 @@
     <link href="../vendor/morrisjs/morris.css" rel="stylesheet">
     <!-- Custom Fonts -->
     <link href="../vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
-    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-    <!--[if lt IE 9]>
-        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
-        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
-    <![endif]-->
 </head>
 
 <body>
@@ -94,19 +88,37 @@
             </ul>
             <!-- /.navbar-top-links -->
         </nav>
+        <!-- /.navbar -->
         <div id="page-wrapper">
-            <div class="row gg-row-truncate">
+            <!-- tabs -->
+            <div class="row">
                 <div class="col-lg-12">
-                  <div class="page-header">
-                    <h4>1. Data Collection</h4>
-                    <p>We started with DJIA stock prices...</p>
-                  </div>
+                    <br>
+                    <ul class="nav nav-pills">
+                        <li class="active"><a href="#collection-pills" data-toggle="tab">Data Collection</a>
+                        </li>
+                        <li><a href="#processing-pills" data-toggle="tab">Pre-Processing</a>
+                        </li>
+                        <li><a href="#analysis-pills" data-toggle="tab">Data Analysis</a>
+                        </li>
+                        <li><a href="#results-pills" data-toggle="tab">Results</a>
+                        </li>
+                    </ul>
+                    <br>
                 </div>
-                <!-- /.col-lg-12 -->
             </div>
             <!-- /.row -->
-            <div class="row gg-row-truncate">
-                <div class="col-lg-6">
+            <div class="tab-content">
+                <div class="tab-pane active" id="collection-pills">
+                    <div class="row gg-row-truncate">
+                        <div class="col-lg-12">
+                            <p>We started with DJIA stock prices...</p>
+                        </div>
+                        <!-- /.col-lg-12 -->
+                    </div>
+                    <!-- /.row -->
+                    <div class="row gg-row-truncate">
+                        <div class="col-lg-6">
                     <!-- stock -->
                     <div class="panel panel-default">
                         <div class="panel-heading">
@@ -151,10 +163,10 @@
                     </div>
                     <!-- /.panel -->
                 </div>
-                <!-- /.col-lg-6 -->
-            </div>
-            <!-- /.row -->
-            <div class="row gg-row-truncate">
+                        <!-- /.col-lg-6 -->
+                    </div>
+                    <!-- /.row -->
+                    <div class="row gg-row-truncate">
                 <div class="col-lg-12">
                     <!-- headlines -->
                     <div class="panel panel-default">
@@ -234,7 +246,14 @@
                 </div>
                 <!-- /.col-lg-6 -->
             </div>
-            <!-- /.row -->
+                    <!-- /.row -->
+                </div>
+                <!-- /#collection-pills -->
+                <div class="tab-pane" id="processing-pills"></div>
+                <div class="tab-pane" id="analysis-pills"></div>
+                <div class="tab-pane" id="results-pills"></div>
+            </div>
+
             <!-- footer -->
             <footer class="footer">
                 <div class="container">

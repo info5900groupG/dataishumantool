@@ -21,3 +21,17 @@
     border-top: 1px solid #eee;
     z-index: 999999;
 }
+
+.gg-btn-width {
+    width: 180px;
+}
+
+#gg-pres-tabs {
+    overflow: scroll;
+    min-width: 800px;
+    text-align: center;
+}
+#gg-pres-tabs button {
+    margin: 0px auto;
+    
+}
