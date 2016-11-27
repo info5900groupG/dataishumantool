@@ -29,9 +29,4 @@
 #gg-pres-tabs {
     overflow: scroll;
     min-width: 800px;
-    text-align: center;
-}
-#gg-pres-tabs button {
-    margin: 0px auto;
-    
 }
