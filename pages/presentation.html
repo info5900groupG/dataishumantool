@@ -95,7 +95,9 @@
                 <div class="col-lg-12">
                     <br>
                     <ul class="nav nav-pills">
-                        <li class="active"><a href="#collection-pills" data-toggle="tab">Data Collection</a>
+                        <li class="active"><a href="#introduction-pills" data-toggle="tab">Introduction</a>
+                        </li>
+                        <li><a href="#collection-pills" data-toggle="tab">Data Collection</a>
                         </li>
                         <li><a href="#processing-pills" data-toggle="tab">Pre-Processing</a>
                         </li>
@@ -109,7 +111,32 @@
             </div>
             <!-- /.row -->
             <div class="tab-content">
-                <div class="tab-pane active" id="collection-pills">
+                <div class="tab-pane active" id="introduction-pills">
+                    <div class="row gg-row-truncate">
+                        <div class="col-lg-12">
+                            <h4>Introduction</h4>
+                            <p>Predicting stock price movement helps businesses estimae their long-term health and profitability.</p>
+                            <p>...</p>
+                            <p>The aim of this research is to determine whether there exists a predictive pattern between stock price movement and current events. To do this, we examine the global stock price and global news headlines.</p>
+                            <div class="row">
+                                <div class="col-lg-7">
+                                    <div class="panel panel-default">
+                                        <div class="panel-body text-center">
+                                            <img src="../images/mindmap.png" />
+                                        </div>
+                                                <!-- /.panel-body -->
+                                                <div class="panel-footer">
+                                                    <div class="caption text-center">Mind Map of Research Approach</div>
+                                                </div>
+                                            </div>
+                                    <!-- /.panel -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /#introduction-pills -->
+                <div class="tab-pane" id="collection-pills">
                     <div class="row gg-row-truncate">
                         <div class="col-lg-12">
                             <h4>
@@ -117,15 +144,15 @@
                             <p>The first data set used in this research is the Dow Jones Industrial Average (DJIA). The data originally came from Yahoo Finance and was then compiled into a table showing stock information from August 8, 2008 to July 1, 2016. Features include: the price that the stock opened; the highest, lowest, and closing price for that day; the day’s volume; the adjusted closing price.</p>
                             <!-- stock -->
                             <div class="row">
-                                <div class="col-lg-10">
+                                <div class="col-lg-8">
                                     <div class="panel panel-default">
                                         <div class="panel-heading">
                                             <a href="https://www.kaggle.com/aaron7sun/stocknews"><i class="fa fa-external-link fa-fw"></i>Dow Jones Industrial Average (DJIA)
                                             </a>
                                         </div>
                                         <!-- /.panel-heading -->
-                                        <div class="panel-body">
-                                            <iframe width="900" height="400" frameborder="0" scrolling="no" src="//plot.ly/~valem/28.embed">
+                                        <div class="panel-body" style="overflow: hidden">
+                                            <iframe width="100%" height="400" frameborder="0" scrolling="no" src="//plot.ly/~valem/28.embed">
                                             </iframe>
                                         </div>
                                         <!-- /.panel-body -->
@@ -147,7 +174,7 @@
                                             </a>
                                         </div>
                                         <!-- /.panel-heading -->
-                                        <div class="panel-body" style="overflow: scroll">
+                                        <div class="panel-body" style="overflow: hidden">
                                             <iframe width="100%" height="600" frameborder="0" scrolling="no" src="//plot.ly/~valem/30.embed"></iframe>
                                         </div>
                                         <!-- /.panel-body -->
@@ -168,7 +195,18 @@
                 <!-- /#processing-pills -->
                 <div class="tab-pane" id="analysis-pills"></div>
                 <!-- /#analysis-pills -->
-                <div class="tab-pane" id="results-pills"></div>
+                <div class="tab-pane" id="results-pills">
+                    <div class="row gg-row-truncate">
+                        <div class="col-lg-12">
+                            <h4>Results</h4>
+                            <p>The accuracy rate of previous logistic model is about 0.52, which is not obvious higher than throwing a coin. So far we can not draw our conclusion that the news data has no effect on stock movement. And there are still many ways to improve the accuracy rate in next period work.</p>
+                            <p>First, we can change our datasets. Now we are using a worldwide and not financial-oriented news dataset to promote the DJIA movement. We can put new datasets which are more strongly related to financial news in America. Meanwhile, we can add other stock markets’ price dataset to our data collection.</p>
+                            <p>Second, we may use other nlp (natural language processing) algorithm, and use finance corpus to train the model. There are also many algorithms involving deep learning field, such as LSTM (long-short term method), that may fit this case. 
+                            </p>
+                            <p>What’s more, the missing value of stock data (there are not data in Saturday and Sunday for the market is closed) should be fully considered. And we may use weekly value as a unit value to avoid the missing value problem.</p>
+                        </div>
+                    </div>
+                </div>
                 <!-- /#results-pills -->
             </div>
 
