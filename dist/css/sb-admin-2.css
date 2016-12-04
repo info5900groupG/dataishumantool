@@ -25,6 +25,22 @@ body {
     border-left: 1px solid #e7e7e7;
   }
 }
+.gg-page-wrapper {
+  padding: 0 15px;
+  min-height: 568px;
+	margin-bottom: 150px; // for footer
+  background-color: white;
+}
+@media (min-width: 768px) {
+  .gg-page-wrapper {
+    position: inherit;
+    // eliminate side bar
+    /*margin: 0 0 0 250px;*/
+    margin: 0 0 0 0px;
+    padding: 0 30px;
+    border-left: 1px solid #e7e7e7;
+  }
+}
 .navbar-top-links {
   margin-right: 0;
 }
