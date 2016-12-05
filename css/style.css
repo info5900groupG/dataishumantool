@@ -32,7 +32,7 @@
 .affix {
     top: 0px;
     padding: 25px 0px 25px 0px;
-    background-color: #f8f8f8;
+    background-color: #fff;
     z-index: 999999;
     width: 100%;
     border-bottom: 1px solid #eee;
@@ -54,6 +54,13 @@
 #gg-pres-tabs {
     overflow: scroll;
     min-width: 800px;
+}
+.gg-hidden {
+    display: none;
+}
+
+#gg-caret {
+    padding: 0px 10px;
 }
 
 .footer {
@@ -78,4 +85,8 @@
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
     transition: all 0.3s ease;
+}
+
+.nav .open>a,.nav .open>a:focus,.nav .open>a:hover {
+    background-color: transparent;
 }

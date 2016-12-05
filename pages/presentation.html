@@ -153,8 +153,17 @@
                         </li>
                         <li><a href="#processing-pills" data-toggle="tab">Pre-Processing</a>
                         </li>
-                        <li><a href="#analysis-pills" data-toggle="tab">Data Analysis</a>
+                        <li class="dropdown">
+                            <a href="#analysis-pills" data-toggle="tab">Data Analysis<span id="gg-caret"><i class="fa fa-caret-down fw"></i></span></a>
+                            <span class="dropdown-toggle" id="gg-span-dropdown"></span>
+                            <ul class="dropdown-menu" id="gg-ul-dropdown">
+                                <li><a class="smoothJump" href="#step1">Step 1</a></li>
+                                <li><a class="smoothJump" href="#step2">Step 2</a></li>
+                                <li><a class="smoothJump" href="#step3">Step 3</a></li>
+                            </ul>
+                            <!-- /.dropdown-menu -->
                         </li>
+                        <!-- /.dropdown -->
                         <li><a href="#results-pills" data-toggle="tab">Results</a>
                         </li>
                         <li><a href="#discussion-pills" data-toggle="tab">Discussion</a>
@@ -259,33 +268,45 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <h4>Data Analysis</h4>
-                            <p>1. Compute the polarity score of combined news</p>
                         </div>
                     </div>
                     <!-- /.row -->
                     <div class="row">
                         <div class="col-lg-6">
+                            <p>1. Compute the polarity score of combined headlines</p>
                             <div class="panel panel-default">
                                 <div class="panel-body" style="overflow: scroll">
-                                    <img src="../images/data_after_polarity.png" class="img-responsive" alt="Polarity of Headlines">
+                                    <iframe width="1000" height="600" frameborder="0" scrolling="no" src="//plot.ly/~valem/32.embed"></iframe>
                                 </div>
                                 <!-- /.panel-body -->
                                 <div class="panel-footer">
-                                    <div class="small text-center">Polarity scores for combined news of 25 days from 6/8/2008 to 7/1/2016</div>
+                                    <div class="small text-center">Partial view of polarity scores for combined top 25 Reddit World News headlines from 8/8/2008 to 7/1/2016</div>
                                 </div>
                                 <!-- /.panel-footer -->
                             </div>
                             <!-- /.panel -->
                         </div>
-                        <div class="col-lg-4">
+                        <div class="col-lg-6">
+                            <p>2. Compute the polarity score of individual headlines</p>
+                            <div class="panel panel-default">
+                                <div class="panel-body" style="overflow: scroll">
+                                    <iframe width="1000" height="600" frameborder="0" scrolling="no" src="//plot.ly/~valem/36.embed"></iframe>
+                                </div>
+                                <!-- /.panel-body -->
+                                <div class="panel-footer">
+                                    <div class="small text-center">Partial view of polarity scores for individual Reddit World News headlines from 8/8/2008 to 7/1/2016</div>
+                                </div>
+                                <!-- /.panel-footer -->
+                            </div>
+                            <!-- /.panel -->
                         </div>
                     </div>
                     <!-- /.row -->
-                    <div class="row">
+                    <div class="row" id="step1">
                         <div class="col-lg-12">
                             <div class="well">
                                 <h5>Description of Changes</h5>
-                                We computed the polarity scores for (combined news od 25 days)
+                                <p>We computed the polarity scores for (combined news od 25 days)</p>
                                 <p><strong>Features:</strong> date, label, positive, negative, compound score, and neutral</p>
                                 <p><strong>Dimension:</strong> 1990 x 5</p>
                             </div>
@@ -300,18 +321,27 @@
                                           <li>For the aforementioned reasons, we felt it was not a suitable tool to analyze news headlines.</li>
                                         </ol>
                                     </li>
+                                    <li>The <a href="#">Vader module</a> returns four features: positive, negative, neutral, and compound. We found it to be appropriately sensitive to the type of content that can be found in news headlines.
+                                        <ol type="a">
+                                            <li>For example, the headline “Afghan children raped with 'impunity,' U.N. official says - this is sick, a three year old was raped and they do nothing” returned the following values:<br>pos: 0.000000<br>neg: 0.424000<br>compound: -0.926000</li>
+                                        </ol>
+                                    </li>
                                 </ol>
                             </div>
                             <div class="well">
                                 <h5>Method</h5>
-                                <p><strong>Features:</strong> stuff</p>
-                                <p><strong>Dimension:</strong> stuff</p>
+                                <p>The vader_lexicon.txt corpus from nltk.sentiment.vader module was used to calculate polarity score.</p>
                             </div>
                             <div class="well">
                                 <h5>References</h5>
                                 <p><strong>Features:</strong> stuff</p>
                                 <p><strong>Dimension:</strong> stuff</p>
                             </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <p id="step2">Step 2 will go here</p>
                         </div>
                     </div>
                 </div>
