@@ -18,10 +18,15 @@
 }
 
 .gg-title-wrap {
-    padding: 10px 30px;
+    padding: 10px 60px;
 }
 .gg-intro-message {
-    padding: 0px 60px 10px 0px;
+    padding-left: 10px;
+    border-left: 1px solid black;
+/*
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+*/
 }
 
 .affix {
