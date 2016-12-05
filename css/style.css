@@ -47,19 +47,6 @@
     margin-left: 250px;
 }
 
-.footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-/*    height: 40px;*/
-    padding:10px 0px 10px 0px;
-    background-color: #f8f8f8;
-    width: 100%;
-    overflow: hidden;
-    border-top: 1px solid #eee;
-    z-index: 999999;
-}
-
 .gg-btn-width {
     width: 180px;
 }
@@ -67,4 +54,28 @@
 #gg-pres-tabs {
     overflow: scroll;
     min-width: 800px;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+/*    height: 40px;*/
+    padding:10px 0px 0px 0px;
+    background-color: #f8f8f8;
+    width: 100%;
+    overflow: hidden;
+    border-top: 1px solid #eee;
+    z-index: 999999;
+}
+
+#gg-to-top {
+    padding: 10px;
+    text-decoration: none;
+    display: none;
+    -webkit-transition: all 0.3s linear;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+    transition: all 0.3s ease;
 }
