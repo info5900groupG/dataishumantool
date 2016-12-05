@@ -74,9 +74,9 @@
                 </div>
             </div>
             <!-- /.navbar-header -->
-<!--            <ul class="nav navbar-top-links navbar-right">-->
-                <!-- view as -->
-<!--
+            <!-- Navbar Right
+            <ul class="nav navbar-top-links navbar-right">
+                <!-- view as 
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="fa fa-eye fa-fw"></i> <i class="fa fa-caret-down"></i>
@@ -99,12 +99,9 @@
                             </a>
                         </li>
                     </ul>
--->
-                    <!-- /.dropdown-messages -->
-<!--                </li>-->
-                <!-- /.dropdown -->
-                <!-- authors/developers -->
-<!--
+                </li>
+                 /.dropdown -->
+                <!-- authors/developers
                 <li class="dropdown">
                     <a class="dropdown-toggle" data-toggle="dropdown" href="#">
                         <i class="fa fa-user fa-fw"></i> <i class="fa fa-caret-down"></i>
@@ -123,12 +120,10 @@
                         <li><a href="#"><strong>Advisor:</strong> Samir Passi</a>
                         </li>
                     </ul>
--->
-                    <!-- /.dropdown-user -->
-<!--                </li>-->
-                <!-- /.dropdown -->
-<!--            </ul>-->
-            <!-- /.navbar-top-links -->
+                </li>
+                <!-- /.dropdown 
+            </ul>
+              /.navbar-top-links -->
         </nav>
         <!-- /.navbar -->
         <!-- Main Content -->
@@ -157,9 +152,9 @@
                             <a href="#analysis-pills" data-toggle="tab">Data Analysis<span id="gg-caret"><i class="fa fa-caret-down fw"></i></span></a>
                             <span class="dropdown-toggle" id="gg-span-dropdown"></span>
                             <ul class="dropdown-menu" id="gg-ul-dropdown">
-                                <li><a class="smoothJump" href="#step1">Step 1</a></li>
-                                <li><a class="smoothJump" href="#step2">Step 2</a></li>
-                                <li><a class="smoothJump" href="#step3">Step 3</a></li>
+                                <li><a class="smoothJump" href="#s1t1">Step 1 Trial 1</a></li>
+                                <li><a class="smoothJump" href="#s1t2">Step 1 Trial 2</a></li>
+                                <li><a class="smoothJump" href="#s2t1">Step 2 Trial 1</a></li>
                             </ul>
                             <!-- /.dropdown-menu -->
                         </li>
@@ -268,47 +263,38 @@
                     <div class="row">
                         <div class="col-lg-12">
                             <h4>Data Analysis</h4>
+                            <p>We began by computing the polarity score of combined news headlines, in order to determine the negativity or positivity of a given day. Examination of the results displayed in the table below indicated that there may have been a flaw in our approach, because the compound scores representing a day's polarity were all very close and all negative. We discovered that the Vader module used in the computation was designed for individual sentences, therefore we decided to compute scores for individual headlines instead.</p>
+                            <p>At this point, the data was used in a training set for the logistic regression model. There were a total of seven trials using slightly modified inputs in order to produce a result that accurately reflected the data set. The first major change mitigated the missing values for stock price on the weekend by analyzing news polarity data in advance of 1 to 3 days per stock price. The data was then divided such that 80% was used to train the model, and the remaining 20% to test. The final two components were computing the rate of change in polarity to parallel the nature of the binary label that shows stock price movement, and weighting the headlines based on rank.</p>
+                        </div>
+                    </div>
+                    <!-- /.row -->
+                    <!-- S1T1 -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h5 id="s1t1">Step 1. Trial 1:</h5>
+                            <p>Compute the polarity score of combined news headlines</p>
+                            <div class="panel panel-default">
+                                <div class="panel-body" style="overflow: scroll">
+                                    <iframe width="1000" height="400" frameborder="0" scrolling="no" src="//plot.ly/~valem/32.embed"></iframe>
+                                </div>
+                                <!-- /.panel-body -->
+                                <div class="panel-footer">
+                                    <div class="small text-center">Partial view of polarity scores for combined top 25 Reddit World News headlines from 8/8/2008 to 7/1/2016.
+                                        <p><strong>Features:</strong> date, label, positive, negative, compound,  neutral <strong>Dimension:</strong> 1990 x 5
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- /.panel-footer -->
+                            </div>
+                            <!-- /.panel -->
                         </div>
                     </div>
                     <!-- /.row -->
                     <div class="row">
-                        <div class="col-lg-6">
-                            <p>1. Compute the polarity score of combined headlines</p>
-                            <div class="panel panel-default">
-                                <div class="panel-body" style="overflow: scroll">
-                                    <iframe width="1000" height="600" frameborder="0" scrolling="no" src="//plot.ly/~valem/32.embed"></iframe>
-                                </div>
-                                <!-- /.panel-body -->
-                                <div class="panel-footer">
-                                    <div class="small text-center">Partial view of polarity scores for combined top 25 Reddit World News headlines from 8/8/2008 to 7/1/2016</div>
-                                </div>
-                                <!-- /.panel-footer -->
-                            </div>
-                            <!-- /.panel -->
-                        </div>
-                        <div class="col-lg-6">
-                            <p>2. Compute the polarity score of individual headlines</p>
-                            <div class="panel panel-default">
-                                <div class="panel-body" style="overflow: scroll">
-                                    <iframe width="1000" height="600" frameborder="0" scrolling="no" src="//plot.ly/~valem/36.embed"></iframe>
-                                </div>
-                                <!-- /.panel-body -->
-                                <div class="panel-footer">
-                                    <div class="small text-center">Partial view of polarity scores for individual Reddit World News headlines from 8/8/2008 to 7/1/2016</div>
-                                </div>
-                                <!-- /.panel-footer -->
-                            </div>
-                            <!-- /.panel -->
-                        </div>
-                    </div>
-                    <!-- /.row -->
-                    <div class="row" id="step1">
                         <div class="col-lg-12">
                             <div class="well">
                                 <h5>Description of Changes</h5>
-                                <p>We computed the polarity scores for (combined news od 25 days)</p>
-                                <p><strong>Features:</strong> date, label, positive, negative, compound score, and neutral</p>
-                                <p><strong>Dimension:</strong> 1990 x 5</p>
+                                <p>The vader_lexicon.txt corpus from nltk.sentiment.vader module was used to calculate the polarity score of the top 25 headlines combined, resulting in a polarity score that represents the negativity or positivity of each day.</p>
                             </div>
                             <div class="well">
                                 <h5>Motivation</h5>
@@ -330,20 +316,94 @@
                             </div>
                             <div class="well">
                                 <h5>Method</h5>
-                                <p>The vader_lexicon.txt corpus from nltk.sentiment.vader module was used to calculate polarity score.</p>
+                                <p>The module was created by using 10 participants to label words on a scale ranging from -4 (extremely negative) to 4 (extremely positive). A neutral word is given a score of 0. Each sentence has three resulting scores: pos_sum, neg_sum, neu_count. pos_sum is the sum of all positively scored words, neg_sum is similarly the score of all negatively scored words, and neu_count is the count of all neutral words in the sentence.</p>
+                                Computing each score:
+                                <ul>
+                                    <li>Positive score: pos_sum / total</li>
+                                    <li>Negative score: neg_sum / total</li>
+                                    <li>Neutral score: neu_count / total</li>
+                                </ul>
+                                <p>A total score sums the three individual scores above. A compound score is then calculated by normalizing the total score, putting the result on a scale ranging from -1 (extremely negative) to 1 (extremely positive).</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row -->
+                    <!-- S1T2 -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h5 id="s1t2">Step 1. Trial 2:</h5>
+                            <p>Compute the polarity score of individual headlines</p>
+                            <div class="panel panel-default">
+                                <div class="panel-body" style="overflow: scroll">
+                                    <iframe width="10000" height="400" frameborder="0" scrolling="no" src="//plot.ly/~valem/36.embed"></iframe>
+                                </div>
+                                <div class="panel-footer">
+                                    <div class="small text-center">Partial view of polarity scores for top 25 individual Reddit World News headlines from 8/8/2008 to 7/1/2016.
+                                        <p><strong>Features:</strong> date, and positive, negative, neutral and compound scores for each of the top 25 headlines on the given date <strong>Dimension:</strong> 1990 x 101
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="well">
+                                <h5>Description of Changes</h5>
+                                <p>Compute four scores (positive, negative, neutral, compound) for each headline, then average the scores across all top 25 headlines within each polarity category.</p>
                             </div>
                             <div class="well">
-                                <h5>References</h5>
-                                <p><strong>Features:</strong> stuff</p>
-                                <p><strong>Dimension:</strong> stuff</p>
+                                <h5>Motivation</h5>
+                                <p>In our previous computation, all compound scores approximated -1 because on average there were more negative words in the combined headlines, so the absolute value of negative scores was always larger than that of positive scores. The Vader module is dependent on the number of words in the sentence, therefore it will produce more accurate results if we consider each headline to be its own sentence. We keep polarity scores separated into four categories (positive, negative, neutral, compound) because these features will be considered when training the prediction model.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="panel panel-default">
+                                <div class="panel-body" style="overflow: scroll">
+                                    <iframe width="900" height="400" frameborder="0" scrolling="no" src="//plot.ly/~valem/38.embed"></iframe>
+                                </div>
+                                <div class="panel-footer">
+                                    <div class="small text-center">Partial view of average polarity scores for the sum of top 25 individual Reddit World News headlines from 8/8/2008 to 7/1/2016. All headlines are equally weighted.
+                                        <p><strong>Features:</strong> date, positive, negative, neutral and compound average scores across the top 25 headlines on the given date <strong>Dimension:</strong> 1990 x 5
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row -->
+                    <br>
+                    <!-- Step 2 -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h5 id="s2t1">Step 2.</h5>
+                            <p>Train the logistic regression model</p>
+                            <div class="well">
+                                <h5>Description of Changes</h5>
+                                <p>Compute four scores (positive, negative, neutral, compound) for each headline, then average the scores across all top 25 headlines within each polarity category.</p>
                             </div>
                         </div>
                     </div>
                     <div class="row">
                         <div class="col-lg-12">
-                            <p id="step2">Step 2 will go here</p>
+                            <div class="panel panel-default">
+                                <div class="panel-body" style="overflow: scroll">
+                                    plotly iframe
+                                </div>
+                                <div class="panel-footer">
+                                    <div class="small text-center">Partial view of polarity scores for top 25 individual Reddit World News headlines from 8/8/2008 to 7/1/2016.
+                                        <p><strong>Features:</strong> date, and positive, negative, neutral and compound scores for each of the top 25 headlines on the given date <strong>Dimension:</strong> 1990 x 101
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
+                    <!-- /.row -->
                 </div>
                 <!-- /#analysis-pills -->
                 <div class="tab-pane" id="results-pills">
