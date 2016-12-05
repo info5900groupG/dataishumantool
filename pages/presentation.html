@@ -131,21 +131,17 @@
             <!-- /.navbar-top-links -->
         </nav>
         <!-- /.navbar -->
-        <!-- Abstract -->
-        <div class="gg-page-wrapper">
+        <!-- Main Content -->
+        <div id="page-wrapper">
+            <!-- Abstract -->
             <div class="row gg-row-truncate">
                 <div class="col-lg-12">
-                    <h4>Abstract</h4>
+                    <h3>Abstract</h3>
                     <p>This research is based on the hypothesis that stock prices are affected by current events. This relationship has been shown in how the value of bitcoin fluctuates, which influced the research question addressed in this work: <b>Can we predict stock prices based on the news?</b>
                     </p>
                 </div>
             </div>
             <!-- /.row -->
-        </div>
-        <!-- /.gg-page-wrapper -->
-        <hr>
-        <!-- Main Content -->
-        <div id="page-wrapper">
             <!-- Tabs -->
             <div class="row">
                 <div class="col-lg-12">
@@ -171,6 +167,7 @@
             <!-- /.row -->
             <!-- Tab Content -->
             <div class="tab-content">
+                <!-- Background -->
                 <div class="tab-pane active" id="background-pills">
                     <div class="row gg-row-truncate">
                         <div class="col-lg-12">
@@ -181,14 +178,14 @@
                             <hr>
                             <p>The aim of this research is to determine whether there exists a predictive pattern between stock price movement and current events. To do this, we examine the global stock price and global news headlines.</p>
                             <div class="row">
-                                <div class="col-lg-7">
+                                <div class="col-lg-8">
                                     <div class="panel panel-default">
                                         <div class="panel-body text-center">
-                                            <img src="../images/mindmap.png" />
+                                            <img src="../images/mindmap.png" class="img-responsive img-rounded" alt="Mind Map" />
                                         </div>
                                                 <!-- /.panel-body -->
                                                 <div class="panel-footer">
-                                                    <div class="caption text-center">Mind Map of Research Approach</div>
+                                                    <div class="caption text-center small">Mind map of research approach</div>
                                                 </div>
                                             </div>
                                     <!-- /.panel -->
@@ -198,6 +195,7 @@
                     </div>
                 </div>
                 <!-- /#background-pills -->
+                <!-- Collection -->
                 <div class="tab-pane" id="collection-pills">
                     <div class="row gg-row-truncate">
                         <div class="col-lg-12">
@@ -256,7 +254,67 @@
                 <!-- /#collection-pills -->
                 <div class="tab-pane" id="processing-pills"></div>
                 <!-- /#processing-pills -->
-                <div class="tab-pane" id="analysis-pills"></div>
+                <!-- Analysis -->
+                <div class="tab-pane" id="analysis-pills">
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h4>Data Analysis</h4>
+                            <p>1. Compute the polarity score of combined news</p>
+                        </div>
+                    </div>
+                    <!-- /.row -->
+                    <div class="row">
+                        <div class="col-lg-6">
+                            <div class="panel panel-default">
+                                <div class="panel-body" style="overflow: scroll">
+                                    <img src="../images/data_after_polarity.png" class="img-responsive" alt="Polarity of Headlines">
+                                </div>
+                                <!-- /.panel-body -->
+                                <div class="panel-footer">
+                                    <div class="small text-center">Polarity scores for combined news of 25 days from 6/8/2008 to 7/1/2016</div>
+                                </div>
+                                <!-- /.panel-footer -->
+                            </div>
+                            <!-- /.panel -->
+                        </div>
+                        <div class="col-lg-4">
+                        </div>
+                    </div>
+                    <!-- /.row -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="well">
+                                <h5>Description of Changes</h5>
+                                We computed the polarity scores for (combined news od 25 days)
+                                <p><strong>Features:</strong> date, label, positive, negative, compound score, and neutral</p>
+                                <p><strong>Dimension:</strong> 1990 x 5</p>
+                            </div>
+                            <div class="well">
+                                <h5>Motivation</h5>
+                                <ol>
+                                    <li>Based on our hypothesis that the stock market may be affected by the mood in the news, we computed scores to represent the attitude of news headlines.</li>
+                                    <li>We tried using the <a href="http://text-processing.com/docs/sentiment.html">text-processing.com Sentiment Analysis API</a> but determined it was not an ideal tool for our purposes.
+                                        <ol type="a">
+                                          <li>The system produced the result "neutral" for words like "war" and "attack". Which we believed to be negative.</li>
+                                          <li>Based on the results, we have reason to believe that all nouns and verbs are considered neutral.</li>
+                                          <li>For the aforementioned reasons, we felt it was not a suitable tool to analyze news headlines.</li>
+                                        </ol>
+                                    </li>
+                                </ol>
+                            </div>
+                            <div class="well">
+                                <h5>Method</h5>
+                                <p><strong>Features:</strong> stuff</p>
+                                <p><strong>Dimension:</strong> stuff</p>
+                            </div>
+                            <div class="well">
+                                <h5>References</h5>
+                                <p><strong>Features:</strong> stuff</p>
+                                <p><strong>Dimension:</strong> stuff</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <!-- /#analysis-pills -->
                 <div class="tab-pane" id="results-pills">
                 </div>
