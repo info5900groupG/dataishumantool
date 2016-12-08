@@ -174,14 +174,23 @@
                                 <li><a class="smoothJump" href="#s1t1">Step 1 Trial 1</a></li>
                                 <li><a class="smoothJump" href="#s1t2">Step 1 Trial 2</a></li>
                                 <li><a class="smoothJump" href="#s2t1">Step 2 Trial 1</a></li>
+                                <li><a class="smoothJump" href="#s2t2">Step 2 Trial 2</a></li>
+                                <li><a class="smoothJump" href="#s2t3">Step 2 Trial 3</a></li>
+                                <li><a class="smoothJump" href="#s2t4">Step 2 Trial 4</a></li>
+                                <li><a class="smoothJump" href="#s2t5">Step 2 Trial 5</a></li>
+                                <li><a class="smoothJump" href="#s2t6">Step 2 Trial 6</a></li>
+                                <li><a class="smoothJump" href="#s2t7">Step 2 Trial 7</a></li>
                             </ul>
                             <!-- /.dropdown-menu -->
                         </li>
                         <!-- /.dropdown -->
                         <li><a href="#results-pills" data-toggle="tab">Results</a>
                         </li>
+                        
+<!--
                         <li><a href="#discussion-pills" data-toggle="tab">Discussion</a>
                         </li>
+-->
                     </ul>
 <!--                    <div id="brick"></div>-->
                     <br>
@@ -600,7 +609,7 @@
                     <!-- Step 2 -->
                     <div class="row">
                         <div class="col-lg-12">
-                            <h5 id="s2t1">Step 2.</h5>
+                            <h5 id="s2t1">Step 2. Trial 1</h5>
                             <p>Train the logistic regression model</p>
                             <div class="well">
                                 <h5>Description of Changes</h5>
@@ -608,15 +617,111 @@
                             </div>
                         </div>
                     </div>
+                    <!-- /.row -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h5 id="s2t2">Step 2. Trial 2</h5>
+                            <div class="well">
+                                <h5>Description of Changes</h5>
+                                <p>Remove compound value.</p>
+                            </div>
+                            <div class="well">
+                                <h5>Motivation</h5>
+                                <p>Information in compound value overlaps with positive and negative scores.</p>
+                            </div>
+                        </div>
+                    </div>
                     <div class="row">
                         <div class="col-lg-12">
                             <div class="panel panel-default">
                                 <div class="panel-body" style="overflow: scroll">
-                                    plotly iframe
+                                    <iframe width="900" height="400" frameborder="0" scrolling="no" src="//plot.ly/~valem/50.embed"></iframe>
                                 </div>
                                 <div class="panel-footer">
-                                    <div class="small text-center">Partial view of polarity scores for top 25 individual Reddit World News headlines from 8/8/2008 to 7/1/2016.
-                                        <p><strong>Features:</strong> date, and positive, negative, neutral and compound scores for each of the top 25 headlines on the given date <strong>Dimension:</strong> 1990 x 101
+                                    <div class="small text-center">Partial view of polarity score differences between today and yesterday from 8/11/2008 to 7/1/2016.
+                                        <p><strong>Features:</strong> date, positive, negative, neutral, compound scores, and four difference values <strong>Dimension:</strong> 1989 x 9
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.row -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h5 id="s2t3">Step 2. Trial 3</h5>
+                            <div class="well">
+                                <h5>Description of Changes</h5>
+                                <p>4 values that are the difference between today and yesterday.</p>
+                            </div>
+                            <div class="well">
+                                <h5>Motivation</h5>
+                                <p>The effect of headlines might be the change of news’ attitudes in today and yesterday.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h5 id="s2t4">Step 2. Trial 4</h5>
+                            <div class="well">
+                                <h5>Description of Changes</h5>
+                                <p>Remove the difference value of compound score in the table of trail </p>
+                            </div>
+                            <div class="well">
+                                <h5>Motivation</h5>
+                                <p>Information in compound value overlaps with positive and negative scores.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h5 id="s2t5">Step 2. Trial 5</h5>
+                            <div class="well">
+                                <h5>Description of Changes</h5>
+                                <p>Using news data in advance of 1/2/3 days to predict stock price. </p>
+                            </div>
+                            <div class="well">
+                                <h5>Motivation</h5>
+                                <p>It might be some time delay between news and stock price.</p>
+                            </div>
+                            <p>The accuracy is around 0.46, which is not ideal.</p>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h5 id="s2t6">Step 2. Trial 6</h5>
+                            <div class="well">
+                                <h5>Description of Changes</h5>
+                                <p>Split dataset into train dataset and test dataset as 4:1 number and take a round to calculate the average accuracy. Add change rate of four polarity scores in original news data.</p>
+                            </div>
+                            <div class="well">
+                                <h5>Motivation</h5>
+                                <p>In previous trials, datasets were not split into training set and testing set.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <h5 id="s2t7">Step 2. Trial 7</h5>
+                            <div class="well">
+                                <h5>Description of Changes</h5>
+                                <p>Add weight value to news data(top1 = 25. . . top25=1), and calculate the weighted average value as the new dataset.</p>
+                            </div>
+                            <div class="well">
+                                <h5>Motivation</h5>
+                                <p>The 25 headlines are ranked from top to bottom based on how hot they are, so the impact of each headline is different.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="panel panel-default">
+                                <div class="panel-body" style="overflow: scroll">
+                                    <iframe width="900" height="400" frameborder="0" scrolling="no" src="//plot.ly/~valem/48.embed"></iframe>
+                                </div>
+                                <div class="panel-footer">
+                                    <div class="small text-center">Partial view of weighted polarity score from 8/11/2008 to 7/1/2016.
+                                        <p><strong>Features:</strong> date, positive, negative, neutral, compound scores <strong>Dimension:</strong> 1990 x 5
                                         </p>
                                     </div>
                                 </div>
@@ -627,12 +732,9 @@
                 </div>
                 <!-- /#analysis-pills -->
                 <div class="tab-pane" id="results-pills">
-                </div>
-                <!-- /#results-pills -->
-                <div class="tab-pane" id="discussion-pills">
                     <div class="row gg-row-truncate">
                         <div class="col-lg-12">
-                            <h4>Discussion</h4>
+                            <h4>Results</h4>
                             <p>The accuracy rate of previous logistic model is about 0.52, which is not obvious higher than throwing a coin. So far we can not draw our conclusion that the news data has no effect on stock movement. And there are still many ways to improve the accuracy rate in next period work.</p>
                             <p>First, we can change our datasets. Now we are using a worldwide and not financial-oriented news dataset to promote the DJIA movement. We can put new datasets which are more strongly related to financial news in America. Meanwhile, we can add other stock markets’ price dataset to our data collection.</p>
                             <p>Second, we may use other nlp (natural language processing) algorithm, and use finance corpus to train the model. There are also many algorithms involving deep learning field, such as LSTM (long-short term method), that may fit this case. 
@@ -640,8 +742,25 @@
                             <p>What’s more, the missing value of stock data (there are not data in Saturday and Sunday for the market is closed) should be fully considered. And we may use weekly value as a unit value to avoid the missing value problem.</p>
                         </div>
                     </div>
+                    <div class="row">
+                        <div class="col-lg-8">
+                            <div class="panel panel-default">
+                                <div class="panel-body text-center">
+                                    <img src="../images/mindmap_update.png" class="img-responsive img-rounded" alt="Mind Map" />
+                                </div>
+                                <!-- /.panel-body -->
+                                <div class="panel-footer">
+                                    <div class="caption text-center small">Updated mind map for future research</div>
+                                </div>
+                            </div>
+                            <!-- /.panel -->
+                        </div>
+                    </div>
                 </div>
-                <!-- /#discussion-pills -->
+                <!-- /#results-pills -->
+                <!-- Discussion 
+                <div class="tab-pane" id="discussion-pills"></div>
+                 /#discussion-pills -->
             </div>
             <!-- /.tab-content -->
             <footer class="footer">
