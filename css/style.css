@@ -66,10 +66,10 @@ button:hover,
     background-color: #fff;
     z-index: 999999;
     width: 100%;
-    border-bottom: 1px solid #eee;
+/*    border-bottom: 1px solid #eee;*/
 }
 #gg-affix-tabs {
-
+    
 }
 #brick {
     height: 80px;
