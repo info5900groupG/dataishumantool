@@ -29,6 +29,12 @@
 
 button:focus {outline:0;}
 
+#gg-xl-icon {
+    font-size: 4em;
+    opacity: 0.5;
+    margin-top: 100%;
+}
+
 .gg-title-wrap {
     padding: 10px 60px;
 }

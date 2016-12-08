@@ -29,7 +29,7 @@ $(window).scroll(function() {
 });
 $('#gg-to-top').click(function() {
     $('body,html').animate({
-        scrollTop : 340
+        scrollTop : 440
     }, 500);
 });
 
