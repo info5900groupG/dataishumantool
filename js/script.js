@@ -6,6 +6,11 @@
 //
 //});
 
+// Learn more
+$('#gg-learn-more').click(function() {
+    $('#gg-bg-well').slideToggle();
+});
+
 //Dropdown
 //$('[gg-data-toggle="dropdown"]').dropdown();
 

@@ -17,6 +17,18 @@
     text-align: center;
 }
 
+#gg-learn-more {
+    padding: 0px;
+    margin: 0px;
+    top: 30px;
+    left: -5px;
+    float: left;
+    position: absolute;
+    text-decoration: none;
+}
+
+button:focus {outline:0;}
+
 .gg-title-wrap {
     padding: 10px 60px;
 }
