@@ -443,24 +443,35 @@
                         <div class="col-lg-6">
                             <div class="well">
                                 <h5>Description of Changes</h5>
-                                <p>1. Combining all news into one paragraph, weight all 25 headlines equally.</p>
+                                <ol>
+                                    <li>Combining all news into one paragraph, weight all 25 headlines equally.
+                                    </li>
+                                </ol>
                             </div>
                             <div class="well">
                                 <h5>Method</h5>
                                 <ol>
                                     <li>Tokenization. Remove all punctuations. Transfer all uppercase into lowercase.</li>
                                     <li>Remove stopwords.</li>
+                                    <li>Delete all numbers in the word list.</li>
                                 </ol>
                             </div>
                         </div>
                         <div class="col-lg-6">
                             <div class="well">
                                 <h5>Motivation</h5>
-                                <p>1. We first assumed that stock will be related to the polarity score of all 25 news.</p>
+                                <ol>
+                                    <li>We first assumed that stock will be related to the polarity score of all 25 news.
+                                    </li>
+                                </ol>
                             </div>
                             <div class="well">
-                                <p>1. This is a necessary step in pre-processing, and most people do this step.</p>
-                                <p>2. Stopwords contain unnecessary information, like “a”</p>
+                                <h5>Motivation</h5>
+                                <ol>
+                                    <li>This is a necessary step in pre-processing, and most people do this step.</li>
+                                    <li>Stopwords contain unnecessary information, like “a”.</li>
+                                    <li>Assuming that numbers have no apparent effect on sentiment analysis.</li>
+                                </ol>
                             </div>
                         </div>
                     </div>
@@ -503,7 +514,7 @@
                         <div class="col-lg-12">
                             <div class="well">
                                 <h5>Description of Changes</h5>
-                                <p>The vader_lexicon.txt corpus from nltk.sentiment.vader module was used to calculate the polarity score of the top 25 headlines combined, resulting in a polarity score that represents the negativity or positivity of each day.</p>
+                                <p>The vader_lexicon.txt corpus from <a href="http://www.nltk.org/api/nltk.sentiment.html">nltk.sentiment.vader module</a> was used to calculate the polarity score of the top 25 headlines combined, resulting in a polarity score that represents the negativity or positivity of each day.</p>
                             </div>
                             <div class="well">
                                 <h5>Motivation</h5>
@@ -516,7 +527,7 @@
                                           <li>For the aforementioned reasons, we felt it was not a suitable tool to analyze news headlines.</li>
                                         </ol>
                                     </li>
-                                    <li>The <a href="#">Vader module</a> returns four features: positive, negative, neutral, and compound. We found it to be appropriately sensitive to the type of content that can be found in news headlines.
+                                    <li>The <a href="http://www.nltk.org/api/nltk.sentiment.html">Vader module</a> returns four features: positive, negative, neutral, and compound. We found it to be appropriately sensitive to the type of content that can be found in news headlines.
                                         <ol type="a">
                                             <li>For example, the headline “Afghan children raped with 'impunity,' U.N. official says - this is sick, a three year old was raped and they do nothing” returned the following values:<br>pos: 0.000000<br>neg: 0.424000<br>compound: -0.926000</li>
                                         </ol>
