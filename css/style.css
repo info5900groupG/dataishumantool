@@ -27,7 +27,16 @@
     text-decoration: none;
 }
 
-button:focus {outline:0;}
+button,
+button:active,
+button:focus, 
+button:hover,
+.btn,
+.btn:active, 
+.btn:focus, 
+.btn:hover{   
+    outline:none !important;
+}
 
 #gg-xl-icon {
     font-size: 4em;
