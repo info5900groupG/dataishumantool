@@ -4,5 +4,5 @@ We designed a template to provide a better sociological understanding of data an
 
 - You can test this page by creating a local server. On a Mac run `$ python -m SimpleHTTPServer [portnumber]`
 
-#### Authors: Denay Mack, Chen Pan, Dai Siqi, and Zhenyi (Gene) Xia
+#### Authors: Val Mack, Chen Pan, Dai Siqi, and Zhenyi (Gene) Xia
 **Advisor: Samir Passi**
